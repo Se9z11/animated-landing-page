@@ -1,7 +1,9 @@
 # .NovaMotion — Design Notes
 
-- Core layout and motion concept established.
-- Focus: modern, balanced design with GSAP-driven animations.
-- Motion section to be finalized and spacing refined for better visual balance.
-- Responsive design for mobile next, then move into development phase.
-- CTA and Footer still pending fine-tuning.
+- Hero and Motion sections refined and visually balanced.
+- Core layout and motion direction now clearly defined.
+- Next focus: CTA and Footer polish, then responsive mobile layout.
+- Preparing transition into HTML/CSS structure after final visual tweaks.
+
+
+
