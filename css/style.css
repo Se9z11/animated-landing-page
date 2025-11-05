@@ -17,6 +17,15 @@ a:link{
     color: white;
 }
 
+a{
+    color: inherit;
+}
+
+a:visited{
+    color: inherit;
+}
+
+
 .btn{
     width: 240px;
     height: 52px;
@@ -29,8 +38,20 @@ a:link{
     font-optical-sizing: auto;
     font-weight: 300;
     font-size: 20px;
+    cursor: pointer;
 }
 
+h4{
+    font-weight: 300;
+    font-size: 24px; 
+    margin: 0; 
+}
+
+h2{
+    font-weight: 300;
+    font-size: 48px;   
+    line-height: 120%; 
+}
 
 /*-- NAVBAR--*/
 
@@ -57,13 +78,17 @@ a:link{
     gap: 24px;
     font-size: 16px;
     color: white;
+}
 
+.nav-links a{
+    cursor: pointer;
 }
 
 .btn#contact-btn{
     width: 92px;
     height: 32px;
     margin-left: 32px;
+    font-size: 16px;
 }
 
 /*-- NAVBAR end--*/
@@ -71,7 +96,9 @@ a:link{
 
 /*-- HERO--*/
 .hero{
+    display: flex;
     align-items: center;
+    justify-content: center;
     padding: 102px 120px 102px 120px; 
     height: 100vh;
 }
@@ -134,7 +161,7 @@ h1 {
     height: 260px;
     width: 260px;
     border-radius: 360px;
-    filter: blur(200px);
+    filter: blur(150px);
     position: absolute;
     z-index: -10;
     top: 20%;
@@ -211,3 +238,40 @@ h1 {
     transition: transform 0.2s ease;
 }
 /*-- HERO-people-end--*/
+
+/*-- Motion--*/
+
+.motion-section{
+    padding-top: 124px;
+    padding-bottom: 124px;
+}
+
+.motion-content{
+    display: flex;
+    gap: 40px;
+}
+
+#motion-video{
+    width: 626px;
+    height: 354px;
+    border: 1px solid white;
+}
+
+.logo-and-section{
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+#motion-h2{
+    max-width: 500px;
+    font-family: "Space Grotesk", sans-serif;
+    margin: 26px 0 32px 0;
+}
+
+#motion-p{
+    font-size: 18px;
+    width: 500px;
+    margin-bottom: 24px;
+    line-height: 150%;
+}
