@@ -244,11 +244,15 @@ h1 {
 .motion-section{
     padding-top: 124px;
     padding-bottom: 124px;
+    position: relative;
+    overflow: hidden;
 }
 
 .motion-content{
     display: flex;
     gap: 40px;
+    position: relative;
+    z-index: 2;
 }
 
 #motion-video{
@@ -275,3 +279,33 @@ h1 {
     margin-bottom: 24px;
     line-height: 150%;
 }
+
+/*---Petals---*/
+
+.background-petals{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    z-index: 0;
+}
+
+#petal-1,
+#petal-2,
+#petal-3,
+#petal-4 {
+  position: absolute;
+  width: 140px;
+  height: auto;
+  opacity: 0.9;
+  transform-origin: center;
+}
+
+#petal-1 { top: 35%; left: 9%; transform: rotate(-45deg); }
+#petal-2 { top: 10%; right: 44%; transform: rotate(55deg); }
+#petal-3 { bottom: 0%; left: 40%; transform: rotate(10deg); }
+#petal-4 { bottom: 12%; right: 15%; transform: rotate(-70deg); }
+
+/*---Petals end---*/
