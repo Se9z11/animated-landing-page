@@ -41,16 +41,34 @@ a:visited{
     cursor: pointer;
 }
 
+h2{
+    font-weight: 300;
+    font-size: 48px;   
+    line-height: 120%; 
+    margin-top: 26px;
+    margin-bottom: 32px;
+}
+
+h3{
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 120%;
+}
+
 h4{
     font-weight: 300;
     font-size: 24px; 
     margin: 0; 
 }
 
-h2{
-    font-weight: 300;
-    font-size: 48px;   
-    line-height: 120%; 
+
+
+p{
+    font-size: 18px;
+    margin-bottom: 24px;
+    line-height: 150%;
 }
 
 /*-- NAVBAR--*/
@@ -274,10 +292,7 @@ h1 {
 }
 
 #motion-p{
-    font-size: 18px;
     width: 500px;
-    margin-bottom: 24px;
-    line-height: 150%;
 }
 
 /*---Petals---*/
@@ -309,3 +324,53 @@ h1 {
 #petal-4 { bottom: 12%; right: 15%; transform: rotate(-70deg); }
 
 /*---Petals end---*/
+
+
+/*---Craft---*/
+
+.craft-section{
+    display: block;
+    padding-top: 124px;
+    padding-bottom: 124px;
+}
+
+.craft-content{
+    align-items: center;
+    justify-items: center;
+}
+
+#craft-p{
+    font-size: 18px;
+    margin-bottom: 24px;
+    line-height: 150%;  
+}
+
+/*---Craft cards---*/
+
+.craft-cards{
+    display: flex;
+}
+
+.card{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+    text-align: center;
+}
+
+.card img{
+    width: 324px;
+    height: 222px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+
+.card p{
+    width: 262px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
