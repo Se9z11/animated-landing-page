@@ -341,15 +341,7 @@ h1 {
     align-items: center;
 }
 
-#greenLine {
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
-  height: auto;
-  z-index: -5;
-}
+
 
 /*---Craft cards---*/
 
@@ -396,12 +388,44 @@ h1 {
 }
 
 
-#content-p{
+.content-p{
     font-size: 18px;
     margin-bottom: 24px;
     line-height: 150%;  
 }
 
+.Line {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: auto;
+  z-index: -5;
+}
+
 /*---Craft and Process content end---*/
 
 /*---Process content---*/
+
+.process-section{
+    padding: 124px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.buttons-wrapper{
+    margin: 32px 0;
+}
+
+#insights{
+    border: none;
+    width: auto;
+    height: auto;
+    margin-left: 40px;
+}
+
+#process-p{
+    width: 800px;
+    margin: 0 auto;
+}
