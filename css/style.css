@@ -55,6 +55,7 @@ h3{
     font-weight: 600;
     font-size: 28px;
     line-height: 120%;
+    margin: 14px 0;
 }
 
 h4{
@@ -329,32 +330,40 @@ h1 {
 /*---Craft---*/
 
 .craft-section{
-    display: block;
-    padding-top: 124px;
-    padding-bottom: 124px;
+    padding: 124px 0;
+    position: relative;
+    overflow: hidden;
 }
 
-.craft-content{
+.craft-section .container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-items: center;
 }
 
-#craft-p{
-    font-size: 18px;
-    margin-bottom: 24px;
-    line-height: 150%;  
+#greenLine {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: auto;
+  z-index: -5;
 }
 
 /*---Craft cards---*/
 
 .craft-cards{
     display: flex;
+    justify-content: center;
+    margin: 64px 0;
+    gap: 40px;
 }
 
 .card{
-    display: block;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
     width: 33%;
     text-align: center;
 }
@@ -362,15 +371,37 @@ h1 {
 .card img{
     width: 324px;
     height: 222px;
-    background-size: cover;
+    object-fit: cover;
     background-position: center;
     border: 1px solid white;
     border-radius: 8px;
 }
 
 .card p{
-    width: 262px;
-    margin-left: auto;
-    margin-right: auto;
+    width: auto;
+    margin: 16px 0;
 }
 
+/*---Craft cards end---*/
+
+
+/*---Craft and Process content---*/
+
+.section-content{
+    text-align: center;
+}
+
+.section-content .logo-and-section{
+    justify-content: center;
+}
+
+
+#content-p{
+    font-size: 18px;
+    margin-bottom: 24px;
+    line-height: 150%;  
+}
+
+/*---Craft and Process content end---*/
+
+/*---Process content---*/
