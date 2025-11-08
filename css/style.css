@@ -429,3 +429,54 @@ h1 {
     width: 800px;
     margin: 0 auto;
 }
+
+/*---Process images---*/
+.process-wrapper {
+  position: relative;
+  width: 100%;
+  height: 646px;
+  margin-top: 64px;
+}
+
+.process-step {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+.step-1 {
+  background-image: url('/assets/images/process1.png');
+  width: 832px;
+  height: 600px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.step-2 {
+  background-image: url('/assets/images/process2.png');
+  width: 352px;
+  height: 460px;
+  right: 10%;
+  top: 30%;
+}
+
+.step-3 {
+  background-image: url('/assets/images/process3.png');
+  width: 330px;
+  height: 246px;
+  left: 5%;
+  bottom: 25%;
+}
+
+.process-step p {
+  position: absolute;
+  font-family: "Space Grotesk", sans-serif;
+  bottom: 0;
+  left: 4%;
+  color: white;
+  font-size: 48px;
+  margin: 0;
+}
