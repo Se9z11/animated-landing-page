@@ -42,6 +42,7 @@ a:visited{
 }
 
 h2{
+    font-family: "Space Grotesk", sans-serif;
     font-weight: 300;
     font-size: 48px;   
     line-height: 120%; 
@@ -494,7 +495,6 @@ h1 {
 }
 
 #cta-h2{
-    font-family: "Space Grotesk", sans-serif;
     font-size: 64px;
 }
 
@@ -508,4 +508,29 @@ h1 {
     margin-left: 18px;
 }
 
+/*---CTA Section end---*/
+
+.NovaMotion-video {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Nova-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.NovaMotion-video h2 {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
 
