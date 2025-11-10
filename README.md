@@ -31,9 +31,9 @@ The goal of this landing page is to master **GSAP** and **ScrollTrigger** by bui
 ## Progress Plan
 | Phase | Focus | Status |
 |-------|--------|--------|
-| 1 | Setup project structure + GSAP         | 🔄 In progress |
-| 2 | Build static HTML/CSS layout           | ⏳ Pending |
-| 3 | Add hero intro animations              | ⏳ Pending |
+| 1 | Setup project structure + GSAP         | ✅ Done |
+| 2 | Build static HTML/CSS layout           | ✅ Done |
+| 3 | Add hero intro animations              | 🔄 In progress |
 | 4 | Add scroll-trigger animations          | ⏳ Pending |
 | 5 | Polish transitions + deploy on Netlify | ⏳ Pending |
 
