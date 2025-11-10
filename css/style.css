@@ -296,6 +296,7 @@ h1 {
 
 #motion-p{
     width: 500px;
+    margin-bottom: 24px;
 }
 
 /*---Petals---*/
@@ -350,7 +351,8 @@ h1 {
 .craft-cards{
     display: flex;
     justify-content: center;
-    margin: 64px 0;
+    margin-top: 64px;
+    margin-bottom: 32px;
     gap: 40px;
 }
 
@@ -538,3 +540,108 @@ h1 {
 
 /*---Footer---*/
 
+footer{
+    padding-top: 64px;
+    padding-bottom: 124px;
+    margin: 0 92px;
+}
+
+footer .logo{
+    position: relative;
+}
+
+footer .logo-and-section{
+    position: absolute;
+    top: 0;
+}
+
+footer h4{
+    font-size: 20px;
+}
+
+footer h5{
+    font-size: 20px;    
+    margin-bottom: 36px;
+    margin-top: 0;
+}
+
+footer a{
+    font-size: 18px;
+    color: white;
+    opacity: 0.7;
+    margin-bottom: 12px;
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: 0.75fr 0.5fr 0.5fr 0.5fr 1fr;
+}
+
+
+.links-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe{
+    width: 432px;
+}
+
+.subscribe p{
+    margin: 22px auto;
+}
+
+#small-text{
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+.subscribe-input{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.subscribe input{
+    width: 300px;
+    background-color: #D9D9D9;
+    opacity: 0.25;
+    border-radius: 8px;
+    height: 40px;
+}
+
+.subscribe button{
+    width: 120px;
+}
+
+.footer-line{
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    margin: 28px auto;
+}
+
+.policy-div{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.policy-div a, p{
+    margin: 0;
+}
+
+.icons-div{
+    gap: 12px;
+}
+
+.icons-div a{
+    opacity: 1;
+}
+
+/*---Footer end---*/
