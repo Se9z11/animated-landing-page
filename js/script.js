@@ -2,17 +2,11 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const tl = gsap.timeline();
-
-ScrollSmoother.create({
-  wrapper: "#smooth-wrapper",
-  content: "#smooth-content",
-  smooth: 1,
-  effects: true
-});
-
 const blobs = document.querySelectorAll(".blob");
 const petals = document.querySelectorAll(".petals")
 
+
+// === BLOB ANIMATIONS ===
 function moveBlobs(blob){
     gsap.to(blob,{
     x: gsap.utils.random(-200, 200),
@@ -23,6 +17,7 @@ function moveBlobs(blob){
     })
 }
 
+// === PETAL LOOP ===
 function movePetals(petal){
   gsap.to(petal,{
     x: gsap.utils.random(-200, 200),
@@ -38,7 +33,7 @@ function movePetals(petal){
 blobs.forEach(blob => moveBlobs(blob))
 petals.forEach(petal => movePetals(petal))
 
-
+// === HERO TIMELINE ===
 tl.from(".hero h1",{
     y:40,
     opacity: 0,
@@ -53,6 +48,14 @@ tl.from(["#hero-p", ".people-wrapper", ".btn"],{
     stagger: 0.2, 
     ease: "power2.out"
 }, "-=0.6")
+
+// === SCROLL TRIGGER ===
+ScrollSmoother.create({
+  wrapper: "#smooth-wrapper",
+  content: "#smooth-content",
+  smooth: 1,
+  effects: true
+});
 
 gsap.to(".hero-content", {
   scrollTrigger: {
