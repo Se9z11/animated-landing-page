@@ -68,3 +68,24 @@ gsap.to(".hero-content", {
   opacity: 0,                
   ease: "power2.out"
 });
+
+
+gsap.from(".motion-text",{
+  scrollTrigger:{
+    trigger: ".motion-section",
+    start: "top 70%",
+    toggleACtions: "play none none reverse",
+  },
+
+  x: 50,
+  opacity: 0,
+  duration: 1.2,
+  ease: "power3.out"
+})
+
+gsap.to(".shine", {
+  backgroundPosition: "200% 0",
+  duration: 30,
+  repeat: -1,
+  ease: "sine.inOut"
+});
