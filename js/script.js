@@ -7,6 +7,7 @@ const petals = document.querySelectorAll(".petals")
 
 
 // === BLOB ANIMATIONS ===
+// Each blob moves to a random position, then recursively calls moveBlobs() for infinite motion
 function moveBlobs(blob){
     gsap.to(blob,{
     x: gsap.utils.random(-200, 200),
@@ -18,6 +19,7 @@ function moveBlobs(blob){
 }
 
 // === PETAL LOOP ===
+// Similar to blobs but with rotation for a drifting particle effect
 function movePetals(petal){
   gsap.to(petal,{
     x: gsap.utils.random(-200, 200),
@@ -30,10 +32,12 @@ function movePetals(petal){
 }
 
 
+// Start blob + petal infinite animations
 blobs.forEach(blob => moveBlobs(blob))
 petals.forEach(petal => movePetals(petal))
 
 // === HERO TIMELINE ===
+// Intro animations for hero elements on page load
 tl.from(".hero h1",{
     y:40,
     opacity: 0,
@@ -50,6 +54,7 @@ tl.from(["#hero-p", ".people-wrapper", ".btn"],{
 }, "-=0.6")
 
 // === SCROLL TRIGGER ===
+// Applies smooth scroll and allows GSAP scroll-linked animations
 ScrollSmoother.create({
   wrapper: "#smooth-wrapper",
   content: "#smooth-content",
@@ -57,6 +62,7 @@ ScrollSmoother.create({
   effects: true
 });
 
+// Fade + translate hero content when scrolling out of view
 gsap.to(".hero-content", {
   scrollTrigger: {
     trigger: ".hero",       
@@ -70,6 +76,8 @@ gsap.to(".hero-content", {
 });
 
 
+// === MOTION SECTION ANIMATION ===
+// Reveals text block when the motion section enters the viewport
 gsap.from(".motion-text",{
   scrollTrigger:{
     trigger: ".motion-section",
@@ -83,6 +91,8 @@ gsap.from(".motion-text",{
   ease: "power3.out"
 })
 
+
+// Smooth background gradient animation for the shine effect
 gsap.to(".shine", {
   backgroundPosition: "200% 0",
   duration: 30,
