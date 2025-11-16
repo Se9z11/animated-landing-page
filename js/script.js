@@ -5,6 +5,20 @@ const tl = gsap.timeline();
 const blobs = document.querySelectorAll(".blob");
 const petals = document.querySelectorAll(".petals")
 
+const craftTL = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".craft-section",
+    start: "top 80%",
+    once: true
+  }
+});
+const processTL = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".process-section",
+    start: "top 80%",
+    once: true
+  }
+});
 
 // === BLOB ANIMATIONS ===
 // Each blob moves to a random position, then recursively calls moveBlobs() for infinite motion
@@ -99,3 +113,73 @@ gsap.to(".shine", {
   repeat: -1,
   ease: "sine.inOut"
 });
+
+
+
+
+// --- SECTION CONTENT ---
+document.querySelectorAll(".section-content").forEach((sec) => {
+  gsap.from(sec, {
+    scrollTrigger: {
+      trigger: sec,
+      start: "top 70%",
+      toggleActions: "play none none reverse",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1.2,
+    ease: "power3.out"
+  });
+});
+
+// --- CARDS ---
+craftTL.from(".card", {
+  y: 40,
+  opacity: 0,
+  duration: 1,
+  ease: "power2.out",
+  stagger: 0.5
+});
+
+
+
+// --- CRAFT LINES ---
+const craftLines = document.querySelectorAll(".craft-section .animated-line");
+
+craftLines.forEach(line => {
+    const length = line.getTotalLength();
+
+    gsap.set(line, {
+        strokeDasharray: length,
+        strokeDashoffset: length
+    });
+});
+
+craftTL.to(".craft-section .animated-line", {
+    strokeDashoffset: 0,
+    duration: 1.2,
+    ease: "power2.out",
+    stagger: 0.05
+});
+
+
+
+// --- PROCESS LINES ---
+const processLines = document.querySelectorAll(".process-section .animated-line");
+
+processLines.forEach(line => {
+    const length = line.getTotalLength();
+
+    gsap.set(line, {
+        strokeDasharray: length,
+        strokeDashoffset: length
+    });
+});
+
+processTL.to(".process-section .animated-line",{
+  strokeDashoffset: 0,
+    duration: 1.2,
+    ease: "power2.out",
+    stagger: 0.05
+})
+
