@@ -204,3 +204,43 @@ gsap.utils.toArray(".process-step").forEach((step, i) => {
     }
   );
 });
+
+
+//Stars
+
+const particleField = document.querySelector(".particle-field");
+const particleCount = 40;
+
+for (let i = 0; i < particleCount; i++) {
+  const p = document.createElement("div");
+  p.classList.add("particle");
+
+  // random start position
+  p.style.left = gsap.utils.random(0, 100) + "%";
+  p.style.top = gsap.utils.random(0, 100) + "%";
+
+  particleField.appendChild(p);
+}
+
+gsap.utils.toArray(".particle").forEach((p) => {
+  
+  // twinkle
+  gsap.to(p, {
+    opacity: gsap.utils.random(0.3, 1),
+    duration: gsap.utils.random(1.2, 2.5),
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut"
+  });
+
+  // drift movement
+  gsap.to(p, {
+    x: "+=" + gsap.utils.random(-20, 20),
+    y: "+=" + gsap.utils.random(-20, 20),
+    duration: gsap.utils.random(4, 8),
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut"
+  });
+
+});
