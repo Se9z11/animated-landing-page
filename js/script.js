@@ -183,3 +183,24 @@ processTL.to(".process-section .animated-line",{
     stagger: 0.05
 })
 
+gsap.utils.toArray(".process-step").forEach((step, i) => {
+  
+  const shift = (i + 1) * 40;  
+  // Step1 = 40 → -20
+  // Step2 = 80 → -40
+  // Step3 = 120 → -60
+
+  gsap.fromTo(step,
+    { y: shift },
+    {
+      y: -shift * 0.5,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".process-wrapper",
+        start: "top 90%",
+        end: "bottom 10%",
+        scrub: true,
+      }
+    }
+  );
+});
