@@ -5,21 +5,6 @@ const tl = gsap.timeline();
 const blobs = document.querySelectorAll(".blob");
 const petals = document.querySelectorAll(".petals")
 
-const craftTL = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".craft-section",
-    start: "top 80%",
-    once: true
-  }
-});
-const processTL = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".process-section",
-    start: "top 80%",
-    once: true
-  }
-});
-
 // === BLOB ANIMATIONS ===
 // Each blob moves to a random position, then recursively calls moveBlobs() for infinite motion
 function moveBlobs(blob){
@@ -133,19 +118,26 @@ document.querySelectorAll(".section-content").forEach((sec) => {
 });
 
 // --- CARDS ---
-craftTL.from(".card", {
+const craftCardsTL = gsap.timeline({
+  scrollTrigger:{
+    trigger: ".craft-section",
+    start: "top 80%",
+    once: true
+  }
+})
+
+craftCardsTL.from(".card", {
   y: 40,
   opacity: 0,
-  duration: 1,
+  duration: 2,
   ease: "power2.out",
-  stagger: 0.5
+  stagger: 0.25
 });
 
 
 
 // --- CRAFT LINES ---
 const craftLines = document.querySelectorAll(".craft-section .animated-line");
-
 craftLines.forEach(line => {
     const length = line.getTotalLength();
 
@@ -155,18 +147,29 @@ craftLines.forEach(line => {
     });
 });
 
+const craftTL = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".craft-section",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: true
+  }
+});
+
 craftTL.to(".craft-section .animated-line", {
     strokeDashoffset: 0,
-    duration: 1.2,
-    ease: "power2.out",
+    ease: "none",
     stagger: 0.05
 });
 
 
 
+
+
+
+
 // --- PROCESS LINES ---
 const processLines = document.querySelectorAll(".process-section .animated-line");
-
 processLines.forEach(line => {
     const length = line.getTotalLength();
 
@@ -176,19 +179,26 @@ processLines.forEach(line => {
     });
 });
 
+const processTL = gsap.timeline({
+  scrollTrigger: {
+   trigger: ".craft-section",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: true
+  }
+});
+
 processTL.to(".process-section .animated-line",{
   strokeDashoffset: 0,
-    duration: 1.2,
-    ease: "power2.out",
+    ease: "none",
     stagger: 0.05
 })
 
+
+//Process parallax
 gsap.utils.toArray(".process-step").forEach((step, i) => {
   
-  const shift = (i + 1) * 40;  
-  // Step1 = 40 → -20
-  // Step2 = 80 → -40
-  // Step3 = 120 → -60
+  const shift = (i + 1) * 80;  
 
   gsap.fromTo(step,
     { y: shift },
@@ -209,7 +219,7 @@ gsap.utils.toArray(".process-step").forEach((step, i) => {
 //Stars
 
 const particleField = document.querySelector(".particle-field");
-const particleCount = 40;
+const particleCount = 100;
 
 for (let i = 0; i < particleCount; i++) {
   const p = document.createElement("div");
@@ -226,8 +236,8 @@ gsap.utils.toArray(".particle").forEach((p) => {
   
   // twinkle
   gsap.to(p, {
-    opacity: gsap.utils.random(0.3, 1),
-    duration: gsap.utils.random(1.2, 2.5),
+    opacity: gsap.utils.random(0, 1),
+    duration: gsap.utils.random(0.5, 2.5),
     repeat: -1,
     yoyo: true,
     ease: "sine.inOut"
@@ -235,8 +245,8 @@ gsap.utils.toArray(".particle").forEach((p) => {
 
   // drift movement
   gsap.to(p, {
-    x: "+=" + gsap.utils.random(-20, 20),
-    y: "+=" + gsap.utils.random(-20, 20),
+    x: "+=" + gsap.utils.random(-40, 40),
+    y: "+=" + gsap.utils.random(-40, 40),
     duration: gsap.utils.random(4, 8),
     repeat: -1,
     yoyo: true,
