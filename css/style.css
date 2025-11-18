@@ -41,6 +41,21 @@ a:visited{
     cursor: pointer;
 }
 
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.4);
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+}
+
+.btn:hover::before {
+    opacity: 1;
+}
+
 h2{
     font-family: "Space Grotesk", sans-serif;
     font-weight: 300;
@@ -302,6 +317,8 @@ h1 {
 .motion-text{
     position: relative;
     overflow: hidden;
+    padding-left: 16px;
+    padding-bottom: 16px;
 }
 
 .shine {

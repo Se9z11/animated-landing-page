@@ -44,7 +44,7 @@ tl.from(".hero h1",{
     ease: "power3.out"
 },0.5);
 
-tl.from(["#hero-p", ".people-wrapper", ".btn"],{
+tl.from(["#hero-p", ".people-wrapper"],{
     y:20,
     opacity: 0,
     duration: 1.2,
