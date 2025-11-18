@@ -198,12 +198,17 @@ processTL.to(".process-section .animated-line",{
 //Process parallax
 gsap.utils.toArray(".process-step").forEach((step, i) => {
   
-  const shift = (i + 1) * 80;  
+  const yShift = (i + 1) * 80;  
+  const xShift = (i + 1) * 10;
+
 
   gsap.fromTo(step,
-    { y: shift },
+    { y: yShift,
+      x: -xShift  
+    },
     {
-      y: -shift * 0.5,
+      y: -yShift * 0.5,
+      x: xShift * 0.5,
       ease: "none",
       scrollTrigger: {
         trigger: ".process-wrapper",
