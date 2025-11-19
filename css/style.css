@@ -638,9 +638,15 @@ footer h5{
 footer a{
     font-size: 18px;
     color: white;
-    opacity: 0.7;
+    opacity: 0.6;
     margin-bottom: 12px;
+    transition: opacity 0.25s ease-out;
 }
+
+footer a:hover {
+  opacity: 1;
+}
+
 
 .footer-grid{
     display: grid;
