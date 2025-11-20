@@ -221,7 +221,7 @@ gsap.utils.toArray(".process-step").forEach((step, i) => {
 });
 
 
-//Stars
+//CTA Stars
 
 const particleField = document.querySelector(".particle-field");
 const particleCount = 100;
@@ -259,3 +259,20 @@ gsap.utils.toArray(".particle").forEach((p) => {
   });
 
 });
+
+//CTA text
+gsap.from([".cta-text"], {
+  opacity: 0,
+  scale: 0.83,
+  y: 10,
+  duration: 1,
+  stagger: 0.15,
+  ease: "back.out(1.7)",
+  scrollTrigger: {
+        trigger: ".cta-section",
+        start: "top 70%",
+        end: "bottom 10%",
+      }
+    }
+);
+
