@@ -276,3 +276,17 @@ gsap.from([".cta-text"], {
     }
 );
 
+
+gsap.fromTo(
+  ".NovaMotion-video h2",
+  {
+    textShadow: "0 0 12px rgba(255,255,255,0.25)",
+  },
+  {
+    textShadow: "0 0 28px rgba(255,255,255,0.55)",
+    duration: 2,
+    ease: "sine.inOut",
+    repeat: -1,
+    yoyo: true,
+  }
+);
