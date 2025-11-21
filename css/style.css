@@ -747,16 +747,12 @@ html{
     font-size: 16px;
 }
 
-body {
-        padding: 0 16px;
-    }
-
 /*===== Phone nav =====*/
 .navbar {
         margin: 0;
         width: 100%;
-        padding: 0 16px;
         height: 64px;
+        padding: 0 16px;
     }
 
     
@@ -782,13 +778,13 @@ h3 {
 p {
         font-size: 16px;
         text-align: center;
+        width: auto !important;
     }
 .btn {
-        width: 100%;
+        width: 100% !important;
         height: 48px;
         font-size: 18px;
     }
-
 
 /* ===== HERO (mobile) ===== */
 .hero {
@@ -797,6 +793,7 @@ p {
     padding: 120px 24px 80px 24px; 
     height: auto; 
 }
+
 
 .hero .logo{
     margin: 0 auto
@@ -826,8 +823,58 @@ h1 {
 }
 
 .people-wrapper{
-    margin: 32px 32px;
+    justify-content: center;
+}
+
+.blobs {
+    position: fixed;
+    inset: 0;
+    overflow: visible;
+    pointer-events: none;
+    z-index: -1;
+    transform-origin: center;
 }
 
 /* ===== HERO (mobile) end ===== */
+
+/* ===== Motion Section (mobile) ===== */
+
+#motion-video{
+    width: 320px;
+    height: 200px;
 }
+
+.motion-section{
+    overflow: hidden;
+}
+
+.motion-content{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ===== Motion Section (mobile) end ===== */
+
+
+.footer-grid{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.subscribe{
+    width: auto;
+}
+
+.subscribe-input{
+    width: auto;
+    flex-direction: column;
+}
+
+.policy-div{
+    flex-direction: column;
+}
+
+}
+
