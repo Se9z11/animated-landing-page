@@ -841,17 +841,18 @@ h1 {
 /* ===== Motion Section (mobile) ===== */
 
 #motion-video{
-    width: 320px;
-    height: 200px;
-}
-
-.motion-section{
-    overflow: hidden;
+    width: auto;
+    height: auto;
 }
 
 .motion-content{
     display: flex;
     flex-direction: column;
+    padding: 0 16px;
+}
+
+.logo-and-section{
+    justify-content: center;
 }
 
 
