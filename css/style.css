@@ -782,7 +782,7 @@ p {
         width: auto !important;
     }
 .btn {
-        width: 100% !important;
+        width: 200px;
         height: 48px;
         font-size: 18px;
     }
@@ -851,6 +851,14 @@ h1 {
     padding: 0 16px;
 }
 
+.motion-text{
+    padding: 0 16px;
+}
+
+.motion-text .btn{
+    position: relative;
+}
+
 .logo-and-section{
     justify-content: center;
 }
@@ -858,6 +866,49 @@ h1 {
 
 /* ===== Motion Section (mobile) end ===== */
 
+
+/* ===== Craft Section (mobile) ===== */
+.section-content{
+    padding: 0 16px;
+}
+
+.craft-cards{
+    flex-direction: column;
+    gap: 24px;
+
+}
+
+.card{
+    width: 100%;
+}
+
+.card p{
+    padding: 0 32px;
+}
+
+.Line {
+        width: 300vw;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0%;
+    }
+/* ===== Craft Section (mobile) end ===== */
+
+/* ===== Process Section (mobile) ===== */
+.buttons-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons-wrapper .btn{
+    margin: 0 auto;
+}
+
+#insights{
+    margin: 16px 0 ;
+    padding: 0;
+}
+/* ===== PRocess Section (mobile) end ===== */
 
 .footer-grid{
     display: flex;
