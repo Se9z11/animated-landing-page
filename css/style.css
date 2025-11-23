@@ -908,6 +908,39 @@ h1 {
     margin: 16px 0 ;
     padding: 0;
 }
+
+
+
+  .process-wrapper {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 32px;
+    align-items: center;
+  }
+
+  .process-step {
+    position: relative;
+    width: 90%;
+    height: auto;
+    padding-top: 65%;
+    background-size: cover;
+    background-position: center;
+    transform: none !important;
+    
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .process-step p {
+    font-size: 28px;
+    bottom: 12px;
+    left: 12px;
+  }
 /* ===== PRocess Section (mobile) end ===== */
 
 .footer-grid{
