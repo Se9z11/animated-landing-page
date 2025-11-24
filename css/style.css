@@ -941,7 +941,40 @@ h1 {
     bottom: 12px;
     left: 12px;
   }
-/* ===== PRocess Section (mobile) end ===== */
+/* ===== Process Section (mobile) end ===== */
+
+/* ===== CTA (mobile) ===== */
+.cta-section {
+        padding: 60px 20px; 
+    }
+
+    #cta-h2 {
+        font-size: 32px; 
+        line-height: 1.2; 
+    }
+
+    .cta-section p {
+        width: 90%; 
+        font-size: 16px; 
+        margin: 12px auto;
+    }
+
+    .buttons-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons-wrapper .btn {
+        width: 80%; 
+        margin: 10px 0; 
+    }
+
+    .buttons-wrapper #quote {
+        margin-left: 0; 
+    }
+
+/* ===== CTA (mobile) end ===== */
 
 .footer-grid{
     display: flex;
