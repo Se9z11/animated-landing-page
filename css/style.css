@@ -982,8 +982,16 @@ h1 {
     gap: 32px;
 }
 
+.subscribe p{
+    text-align: left !important;
+}
+
 .subscribe{
     width: auto;
+}
+
+.subscribe input{
+    width: 100%;
 }
 
 .subscribe-input{
@@ -993,6 +1001,17 @@ h1 {
 
 .policy-div{
     flex-direction: column;
+}
+
+
+.footer-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.icons-div{
+    margin-top: 32px;
+    text-align: center;
 }
 
 }
