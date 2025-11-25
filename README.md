@@ -35,7 +35,7 @@ The goal of this landing page is to master **GSAP** and **ScrollTrigger** by bui
 | 2 | Build static HTML/CSS layout           | ✅ Done |
 | 3 | Add hero intro animations              | ✅ Done |
 | 4 | Add scroll-trigger animations          | ✅ Done |
-| 5 | Polish transitions + deploy on Netlify | ⏳ Pending |
+| 5 | Polish transitions + deploy on Netlify | 🔄 In progress |
 
 ---
 
