@@ -853,10 +853,7 @@ h1 {
 
 .motion-text{
     padding: 0 16px;
-}
-
-.motion-text .btn{
-    position: relative;
+    text-align: center;
 }
 
 .logo-and-section{
@@ -892,6 +889,11 @@ h1 {
         transform: translateX(-50%);
         top: 0%;
     }
+
+
+#green-line{
+    top: 17%;
+}
 /* ===== Craft Section (mobile) end ===== */
 
 /* ===== Process Section (mobile) ===== */
